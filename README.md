@@ -14,7 +14,7 @@ Development and testing has been performed in conda 24.11.3
 ### usage
 `python3 main.py`
 
-## Windows
+## Windows .exe
 
 Sharing the app for Windows colleagues (weirdos) has been made using PyInstaller in Conda in a Windows environment.
 
