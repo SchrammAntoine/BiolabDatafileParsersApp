@@ -14,6 +14,18 @@ Development and testing has been performed in conda 24.11.3
 ### usage
 `python3 main.py`
 
+## Windows
+
+Sharing the app for Windows colleagues (weirdos) has been made using PyInstaller in Conda in a Windows environment.
+
+#### create a new environment that recapitulates the one used in production
+`conda create --name BiolabDatafileParsersApp --file environment.yml`
+
+`conda activate BiolabDatafileParsersApp`
+#### install PyInstaller and run
+`conda install -c conda-forge pyinstaller`
+
+`pyinstaller --onefile --name BiolabDatafileParsers main.py`
 
 ## Hack
 
