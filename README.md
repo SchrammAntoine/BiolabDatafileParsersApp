@@ -25,7 +25,7 @@ Alternatively, to manually set up the environment, install the following key lib
 
 ### Testing
 The application has been tested on the following systems:
-* Linux, miniconda
+* Ubuntu 22.04.3 LTS, miniconda (conda version 24.11.3)
 * Windows 10 Pro, Anaconda Prompt (conda version 25.3.1)
 
 ## Running
