@@ -8,7 +8,7 @@ ABIF is a format used by Applied Biosystems software. It is generated as a final
 
 This app implements a parser that converts ABIF files into plain-text, tab-separated tables, enabling further data visualization using your preferred tools.
 
-### Malvern PEAQ ITC
+#### Malvern PEAQ ITC
 Software associated with Malvern PEAQ ITC instruments generates UTF-8 encoded data files with .itc and .apj extensions. These files can be opened in any text editor.
 .itc files contain experimental setup and raw recorded data, and are relatively easy to manipulate.
 .apj files contain processed data and are structured in XML format.
