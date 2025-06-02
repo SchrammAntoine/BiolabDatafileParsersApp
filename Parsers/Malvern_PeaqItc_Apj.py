@@ -96,6 +96,13 @@ def FetchModelParam(experiments) :
     text = [f"{label} : {value}" for label, value in fit_params.items()]
     return "\n".join(text)
 
+def FetchFit(experiments) :
+    fitting = experiments.find("FittingResult").find('FitPoints')
+    fit_x = np.array([ float(item.find("X").text) for item in fitting ])
+    fit_y = np.array([ float(item.find("Y").text) for item in fitting ]) ## This is expected heat, according to model, given in kcal/mol
+
+    lines = [ f"{x}\t{y}" for x,y in zip(fit_x, fit_y) ]
+    return '\n'.join(lines)
 
 
 def Parse_MalvernPeaqItc_Apj(file_name) :
@@ -108,11 +115,13 @@ def Parse_MalvernPeaqItc_Apj(file_name) :
     baseline = FetchBaseline(experiments)
     analysis = FetchAnalysis(experiments)
     model_param = FetchModelParam(experiments)
+    fit = FetchFit(experiments)
 
     output = {
         "Raw Signal" : raw_signal,
         "Baseline" : baseline,
-        "Analysis" : analysis,
+        "Integrated Signal" : analysis,
+        "Fit" : fit,
         "Model Parameters" : model_param
     }
     return output
